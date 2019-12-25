@@ -17,7 +17,7 @@ test.each([
 
 test.each([
   ['weak kick', 10, 91],
-  ['strong kick', 1000, 0]
+  ['strong kick', 1000, 0],
 ])(
   ('should calculate damage for %s'),
   (userCase, kick, finalHealth) => {
