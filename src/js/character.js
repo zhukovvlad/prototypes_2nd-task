@@ -26,12 +26,8 @@ export default function Character(name, type) {
   }
 }
 
-
-Character.prototype = {
-  damage: function(x) {
-    console.log(Object.keys(this));
-    this.health = this.health - x * (1 - this.defense / 100);
-    if (this.health < 0) this.health = 0;
-    console.log(`Нанесли урон с силой ${x}. Здоровье уменьшилось на ${x * (1 - this.defense / 100)}.`);
-  },
+Character.prototype.damage = function damage(x) {
+  this.health = this.health - x * (1 - this.defense / 100);
+  if (this.health < 0) this.health = 0;
+  console.log(`Нанесли урон с силой ${x}. Здоровье уменьшилось на ${x * (1 - this.defense / 100)}.`);
 };

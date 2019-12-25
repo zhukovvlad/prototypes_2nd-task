@@ -1,4 +1,4 @@
-import sum from '../basic';
+import sum from '../character';
 
 test('should sum', () => {
   const result = sum([1, 2, 3]);
